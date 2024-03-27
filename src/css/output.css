@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -32,11 +32,9 @@
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
-7. Disable tap highlights on iOS
 */
 
-html,
-:host {
+html {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -46,14 +44,12 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
   font-variation-settings: normal;
   /* 6 */
-  -webkit-tap-highlight-color: transparent;
-  /* 7 */
 }
 
 /*
@@ -125,10 +121,8 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font-family by default.
-2. Use the user's configured `mono` font-feature-settings by default.
-3. Use the user's configured `mono` font-variation-settings by default.
-4. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -137,12 +131,8 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-feature-settings: normal;
-  /* 2 */
-  font-variation-settings: normal;
-  /* 3 */
   font-size: 1em;
-  /* 4 */
+  /* 2 */
 }
 
 /*
@@ -636,6 +626,14 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.-mr-10 {
+  margin-right: -2.5rem;
+}
+
+.-mt-\[195px\] {
+  margin-top: -195px;
+}
+
 .-mt-\[30px\] {
   margin-top: -30px;
 }
@@ -648,6 +646,10 @@ body {
   margin-top: 2.5rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -656,24 +658,12 @@ body {
   margin-top: 1.25rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.-mr-10 {
-  margin-right: -2.5rem;
-}
-
-.-mt-\[195px\] {
-  margin-top: -195px;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .mt-\[10px\] {
@@ -728,8 +718,24 @@ body {
   width: 100%;
 }
 
+.max-w-\[1050px\] {
+  max-width: 1050px;
+}
+
+.max-w-\[1060px\] {
+  max-width: 1060px;
+}
+
 .max-w-\[1073px\] {
   max-width: 1073px;
+}
+
+.max-w-\[1144px\] {
+  max-width: 1144px;
+}
+
+.max-w-\[1160px\] {
+  max-width: 1160px;
 }
 
 .max-w-\[1168px\] {
@@ -742,26 +748,6 @@ body {
 
 .max-w-\[1336px\] {
   max-width: 1336px;
-}
-
-.max-w-full {
-  max-width: 100%;
-}
-
-.max-w-\[1050px\] {
-  max-width: 1050px;
-}
-
-.max-w-\[1060px\] {
-  max-width: 1060px;
-}
-
-.max-w-\[1144px\] {
-  max-width: 1144px;
-}
-
-.max-w-\[1160px\] {
-  max-width: 1160px;
 }
 
 .max-w-\[232px\] {
@@ -787,6 +773,10 @@ body {
 .max-w-fit {
   max-width: -moz-fit-content;
   max-width: fit-content;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .shrink-0 {
@@ -828,16 +818,16 @@ body {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -864,32 +854,36 @@ body {
   gap: 2.5rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
-}
-
-.gap-\[100px\] {
-  gap: 100px;
-}
-
-.gap-\[30px\] {
-  gap: 30px;
-}
-
 .gap-3 {
   gap: 0.75rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-6 {
   gap: 1.5rem;
 }
 
+.gap-\[100px\] {
+  gap: 100px;
+}
+
 .gap-\[15px\] {
   gap: 15px;
 }
 
+.gap-\[30px\] {
+  gap: 30px;
+}
+
 .overflow-hidden {
   overflow: hidden;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .rounded-md {
@@ -898,10 +892,6 @@ body {
 
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
 }
 
 .rounded-br-\[200px\] {
@@ -922,6 +912,16 @@ body {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.bg-\[\#1B1B1B\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(27 27 27 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#AC85FF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(172 133 255 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#FF00C7\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 199 / var(--tw-bg-opacity));
@@ -930,6 +930,11 @@ body {
 .bg-\[\#eaeaea\] {
   --tw-bg-opacity: 1;
   background-color: rgb(234 234 234 / var(--tw-bg-opacity));
+}
+
+.bg-blueviolet {
+  --tw-bg-opacity: 1;
+  background-color: rgb(80 39 181 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -941,27 +946,12 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#1B1B1B\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(27 27 27 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#AC85FF\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(172 133 255 / var(--tw-bg-opacity));
-}
-
-.bg-blueviolet {
-  --tw-bg-opacity: 1;
-  background-color: rgb(80 39 181 / var(--tw-bg-opacity));
+.bg-\[url\(\'\.\.\/assets\/bg\.jpg\'\)\] {
+  background-image: url('../assets/bg.jpg');
 }
 
 .bg-heroGradient {
   background-image: linear-gradient(95deg, #4923B4 2.39%, #E878CF 97.66%);
-}
-
-.bg-\[url\(\'\.\.\/assets\/bg\.jpg\'\)\] {
-  background-image: url('../assets/bg.jpg');
 }
 
 .bg-cover {
@@ -978,6 +968,11 @@ body {
 
 .p-\[25px\] {
   padding: 25px;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .px-4 {
@@ -1015,9 +1010,19 @@ body {
   padding-bottom: 5rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-\[10px\] {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.py-\[14px\] {
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .py-\[6px\] {
@@ -1028,21 +1033,6 @@ body {
 .py-\[9px\] {
   padding-top: 9px;
   padding-bottom: 9px;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.py-\[14px\] {
-  padding-top: 14px;
-  padding-bottom: 14px;
 }
 
 .pb-20 {
@@ -1057,18 +1047,6 @@ body {
   padding-bottom: 15px;
 }
 
-.pt-10 {
-  padding-top: 2.5rem;
-}
-
-.pt-32 {
-  padding-top: 8rem;
-}
-
-.pt-\[35px\] {
-  padding-top: 35px;
-}
-
 .pb-\[235px\] {
   padding-bottom: 235px;
 }
@@ -1077,8 +1055,20 @@ body {
   padding-bottom: 50px;
 }
 
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
+}
+
 .pt-\[30px\] {
   padding-top: 30px;
+}
+
+.pt-\[35px\] {
+  padding-top: 35px;
 }
 
 .pt-\[65px\] {
@@ -1091,6 +1081,15 @@ body {
 
 .font-montserrat {
   font-family: Montserrat, sans-serif;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-\[14px\] {
+  font-size: 14px;
 }
 
 .text-\[15px\] {
@@ -1114,25 +1113,6 @@ body {
   line-height: 1.5rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-\[14px\] {
-  font-size: 14px;
-}
-
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1141,6 +1121,16 @@ body {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -1159,6 +1149,10 @@ body {
   text-transform: uppercase;
 }
 
+.leading-4 {
+  line-height: 1rem;
+}
+
 .leading-\[22px\] {
   line-height: 22px;
 }
@@ -1169,10 +1163,6 @@ body {
 
 .leading-normal {
   line-height: 1.5;
-}
-
-.leading-4 {
-  line-height: 1rem;
 }
 
 .tracking-\[-0\.0024em\] {
@@ -1186,6 +1176,16 @@ body {
 .text-\[\#464747\] {
   --tw-text-opacity: 1;
   color: rgb(70 71 71 / var(--tw-text-opacity));
+}
+
+.text-\[\#787878\] {
+  --tw-text-opacity: 1;
+  color: rgb(120 120 120 / var(--tw-text-opacity));
+}
+
+.text-\[\#BDB9B9\] {
+  --tw-text-opacity: 1;
+  color: rgb(189 185 185 / var(--tw-text-opacity));
 }
 
 .text-blueviolet {
@@ -1203,25 +1203,15 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-\[\#787878\] {
-  --tw-text-opacity: 1;
-  color: rgb(120 120 120 / var(--tw-text-opacity));
-}
-
-.text-\[\#BDB9B9\] {
-  --tw-text-opacity: 1;
-  color: rgb(189 185 185 / var(--tw-text-opacity));
+.shadow-\[0px_0px_11px_0px_rgba\(153\2c 153\2c 153\2c 0\.30\)\] {
+  --tw-shadow: 0px 0px 11px 0px rgba(153,153,153,0.30);
+  --tw-shadow-colored: 0px 0px 11px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-\[0px_0px_9px_0px_\#99999740\] {
   --tw-shadow: 0px 0px 9px 0px #99999740;
   --tw-shadow-colored: 0px 0px 9px 0px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-\[0px_0px_11px_0px_rgba\(153\2c 153\2c 153\2c 0\.30\)\] {
-  --tw-shadow: 0px 0px 11px 0px rgba(153,153,153,0.30);
-  --tw-shadow-colored: 0px 0px 11px 0px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1320,6 +1310,11 @@ body {
   transition-duration: 150ms;
 }
 
+.hover\:bg-\[\#5228B6\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 40 182 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-blueviolet:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(80 39 181 / var(--tw-bg-opacity));
@@ -1330,24 +1325,19 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-\[\#5228B6\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(82 40 182 / var(--tw-bg-opacity));
-}
-
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .hover\:text-blueviolet:hover {
   --tw-text-opacity: 1;
   color: rgb(80 39 181 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:after\:scale-100:hover::after {
@@ -1495,16 +1485,16 @@ body {
     justify-content: center;
   }
 
-  .md\:gap-5 {
-    gap: 1.25rem;
-  }
-
   .md\:gap-10 {
     gap: 2.5rem;
   }
 
   .md\:gap-2 {
     gap: 0.5rem;
+  }
+
+  .md\:gap-5 {
+    gap: 1.25rem;
   }
 
   .md\:p-5 {
